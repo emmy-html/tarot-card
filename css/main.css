@@ -91,7 +91,7 @@ p {
   margin: 0; }
 
 body {
-  background: #9ADBE8;
+  background: #fff;
   font-family: "Montserrat", sans-serif; }
 
 .content-wrapper {
@@ -137,7 +137,7 @@ body {
       background: #2F004F;
       border: 5px solid #2F004F;
       border-radius: 10px;
-      color: #9ADBE8;
+      color: #fff;
       font-weight: 700;
       font-size: 1.5rem;
       outline: none;
@@ -148,7 +148,7 @@ body {
         transition: .5s background-color;
         transition: .2s border-color; }
   #main-content #tarot-card-container {
-    border: 5px solid #9ADBE8;
+    border: 5px solid #fff;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -158,30 +158,32 @@ body {
     transition: 1s border-color;
     transition: .25s opacity; }
     #main-content #tarot-card-container #card-color {
-      background: #9ADBE8;
       border-radius: 15px 15px 0px 0px;
-      height: 200px;
+      height: 250px;
       width: 100%;
-      z-index: -1000;
       transition: 1s background-color; }
-    #main-content #tarot-card-container h2,
-    #main-content #tarot-card-container h3,
-    #main-content #tarot-card-container p {
-      background: #fff;
-      padding: 0px 5px;
-      z-index: -1000; }
-    #main-content #tarot-card-container p {
-      border-radius: 0px 0px 15px 15px;
-      font-size: .90rem;
-      padding-bottom: 20px;
-      text-align: justify; }
-    #main-content #tarot-card-container #card-number {
-      font-weight: 300;
-      padding-top: 10px; }
-    #main-content #tarot-card-container #card-name {
-      font-weight: 700; }
-    #main-content #tarot-card-container #card-pantone {
-      font-weight: 100; }
+    #main-content #tarot-card-container .card-data {
+      height: 170px;
+      padding: 5px;
+      z-index: -1000 !important; }
+      #main-content #tarot-card-container .card-data h2,
+      #main-content #tarot-card-container .card-data h3,
+      #main-content #tarot-card-container .card-data p {
+        padding: 0px 5px; }
+      #main-content #tarot-card-container .card-data p {
+        border-radius: 0px 0px 15px 15px;
+        font-size: .80rem;
+        padding-bottom: 10px;
+        text-align: left; }
+      #main-content #tarot-card-container .card-data #card-number {
+        font-weight: 300;
+        padding-top: 10px; }
+      #main-content #tarot-card-container .card-data #card-name {
+        font-weight: 700; }
+      #main-content #tarot-card-container .card-data #card-pantone {
+        font-size: .85rem;
+        font-weight: 100;
+        text-transform: uppercase; }
 
 footer {
   padding: 10px 0px; }
@@ -191,6 +193,17 @@ footer {
 .hide-card {
   opacity: 0; }
 
+@media screen and (min-width: 768px) {
+  #hero {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+  #main-content #tarot-card-container {
+    width: 300px; }
+
+  footer {
+    text-align: center; } }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
