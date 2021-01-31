@@ -78,6 +78,107 @@ textarea {
   padding: 0.2em 0; }
 
 /* universal styles */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Fraunces", serif;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0; }
+
+body {
+  background: #9ADBE8;
+  font-family: "Montserrat", sans-serif; }
+
+.content-wrapper {
+  margin: 0px 20px; }
+
+/* fade in animation */
+.fade-in {
+  animation: fadeIn 1s 0s 1; }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* hero */
+#hero {
+  padding: 20px; }
+  #hero h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    text-transform: lowercase; }
+    #hero h1 span {
+      display: block;
+      font-size: 1.25rem;
+      line-height: 1.20rem; }
+
+#main-content {
+  /* spread selection */
+  /* tarot card container */ }
+  #main-content #spreads {
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #main-content #spreads h1 {
+      text-align: center;
+      text-transform: lowercase; }
+    #main-content #spreads .spread-type-container {
+      width: 100%; }
+      #main-content #spreads .spread-type-container .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0px 30px;
+        text-align: center; }
+  #main-content #tarot-card-container {
+    border: 5px solid pink;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px; }
+    #main-content #tarot-card-container #card-color {
+      background: pink;
+      border-radius: 15px 15px 0px 0px;
+      height: 200px;
+      width: 100%;
+      z-index: -1000; }
+    #main-content #tarot-card-container h2,
+    #main-content #tarot-card-container h3,
+    #main-content #tarot-card-container p {
+      background: #fff;
+      padding: 0px 5px;
+      z-index: -1000; }
+    #main-content #tarot-card-container p {
+      border-radius: 0px 0px 15px 15px;
+      font-size: .90rem;
+      padding-bottom: 20px;
+      text-align: justify; }
+    #main-content #tarot-card-container #card-number {
+      font-weight: 300;
+      padding-top: 10px; }
+    #main-content #tarot-card-container #card-name {
+      font-weight: 700; }
+    #main-content #tarot-card-container #card-pantone {
+      font-weight: 100; }
+
+footer {
+  padding: 10px 0px; }
+  footer h3 {
+    display: inline-block; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

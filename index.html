@@ -17,17 +17,49 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="fade-in">
   <main>
     <section id="hero">
       <h1>Welcome to Emmy's
-        <span>Tarot Card of the Day</span>
-        <span>Heavily Inspired by <a href="#" target="_blank">Pantone</a>.</span>
+        <span>Tarot Card Generator</span>
+        <span>Inspired by <a href="#" target="_blank">Pantone</a>.</span>
       </h1>
     </section>
-    <section id="tarot-card">
-
+    <section id="main-content">
+      <article id="spreads">
+        <h1>Choose A Spread</h1>
+        <aside class="spread-type-container">
+          <div class="content-wrapper">
+            <p>Card of the Day</p>
+            <input type="checkbox" id="cotd"></input>
+          </div>
+        </aside>
+        <aside class="spread-type-container">
+          <div class="content-wrapper">
+            <p>Past, Present, Future</p>
+            <input type="checkbox" id="ppf"></input>
+          </div>
+        </aside>
+        <button id="card-pull">
+          Pull A Card
+        </button>
+      </article>
+      <article id="tarot-card-container">
+        <span id="card-color">
+        </span>
+        <h2 id="card-number">##</h2>
+        <h2 id="card-name">The Blank</h2>
+        <h3 id="card-pantone">Pantone Name</h3>
+        <p><b>Themes:</b> <span id="card-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span></p>
+      </article>
     </section>
+  </main>
+  <footer>
+    <div class="content-wrapper">
+    <i class="far fa-moon"></i>
+    <h3>emmy's tarot generator</h3>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 
