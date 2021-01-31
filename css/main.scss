@@ -132,58 +132,67 @@
   #hero {
     padding: 20px;
     h1 {
-      font-size: 1.5rem;
+      color: $dark-purple;
+      font-size: 1.75rem;
       line-height: 1.75rem;
       text-transform: lowercase;
       span {
         display: block;
-        font-size: 1.25rem;
-        line-height: 1.20rem;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        a:link,
+        a:visited {
+          border-bottom: 3px dashed $dark-purple;
+          color: $light-purple;
+          text-decoration: none;
+          &:hover {
+            color: $dusty-pink;
+            transition: .5s color;
+          }
+        }
       }
     }
   }
   #main-content {
-    /* spread selection */
-    #spreads {
-      background: #fff;
-      border-radius: 20px;
-      padding: 10px;
-      width: 85%;
-      margin: 0 auto;
+    .button-container {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
-      h1 {
-        text-align: center;
+      justify-content: center;
+      button {
+        background: $dark-purple;
+        border: 5px solid $dark-purple;
+        border-radius: 10px;
+        color: $light-blue;
+        font-weight: $bold;
+        font-size: 1.5rem;
+        outline: none;
         text-transform: lowercase;
-      }
-      .spread-type-container {
-        width: 100%;
-        .content-wrapper {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          margin: 0px 30px;
-          text-align: center;
+        &:hover {
+          background: $dusty-pink;
+          border: 5px solid $dusty-pink;
+          transition: .5s background-color;
+          transition: .2s border-color;
         }
       }
     }
     /* tarot card container */ 
     #tarot-card-container {
-      border: 5px solid pink;
+      border: 5px solid $light-blue;
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       width: 90%;
       margin: 0 auto;
       margin-top: 20px;
+      transition: 1s border-color;
+      transition: .25s opacity;
       #card-color {
-        background: pink;
+        background: $light-blue;
         border-radius: 15px 15px 0px 0px;
         height: 200px;
         width: 100%;
         z-index: -1000;
+        transition: 1s background-color;
       }
       h2,
       h3,
@@ -215,6 +224,9 @@
     h3 {
       display: inline-block;
     }
+  }
+  .hide-card {
+    opacity: 0;
   }
   
   /* ==========================================================================

@@ -109,52 +109,61 @@ body {
 #hero {
   padding: 20px; }
   #hero h1 {
-    font-size: 1.5rem;
+    color: #2F004F;
+    font-size: 1.75rem;
     line-height: 1.75rem;
     text-transform: lowercase; }
     #hero h1 span {
       display: block;
-      font-size: 1.25rem;
-      line-height: 1.20rem; }
+      font-size: 1.5rem;
+      line-height: 1.5rem; }
+      #hero h1 span a:link,
+      #hero h1 span a:visited {
+        border-bottom: 3px dashed #2F004F;
+        color: #5F0A87;
+        text-decoration: none; }
+        #hero h1 span a:link:hover,
+        #hero h1 span a:visited:hover {
+          color: #A4508B;
+          transition: .5s color; }
 
 #main-content {
-  /* spread selection */
   /* tarot card container */ }
-  #main-content #spreads {
-    background: #fff;
-    border-radius: 20px;
-    padding: 10px;
-    width: 85%;
-    margin: 0 auto;
+  #main-content .button-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    #main-content #spreads h1 {
-      text-align: center;
+    align-items: center;
+    justify-content: center; }
+    #main-content .button-container button {
+      background: #2F004F;
+      border: 5px solid #2F004F;
+      border-radius: 10px;
+      color: #9ADBE8;
+      font-weight: 700;
+      font-size: 1.5rem;
+      outline: none;
       text-transform: lowercase; }
-    #main-content #spreads .spread-type-container {
-      width: 100%; }
-      #main-content #spreads .spread-type-container .content-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0px 30px;
-        text-align: center; }
+      #main-content .button-container button:hover {
+        background: #A4508B;
+        border: 5px solid #A4508B;
+        transition: .5s background-color;
+        transition: .2s border-color; }
   #main-content #tarot-card-container {
-    border: 5px solid pink;
+    border: 5px solid #9ADBE8;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    margin-top: 20px; }
+    margin-top: 20px;
+    transition: 1s border-color;
+    transition: .25s opacity; }
     #main-content #tarot-card-container #card-color {
-      background: pink;
+      background: #9ADBE8;
       border-radius: 15px 15px 0px 0px;
       height: 200px;
       width: 100%;
-      z-index: -1000; }
+      z-index: -1000;
+      transition: 1s background-color; }
     #main-content #tarot-card-container h2,
     #main-content #tarot-card-container h3,
     #main-content #tarot-card-container p {
@@ -178,6 +187,9 @@ footer {
   padding: 10px 0px; }
   footer h3 {
     display: inline-block; }
+
+.hide-card {
+  opacity: 0; }
 
 /* ==========================================================================
    Helper classes
